@@ -72,7 +72,7 @@ const Hero = () => {
 			</div>
 			<div className='w-full md:w-1/3'>
 				<motion.img
-					src='/vite.svg'
+					src='https://picsum.photos/id/43/900/900'
 					alt='beta'
 					className='w-full'
 					initial='hidden'
