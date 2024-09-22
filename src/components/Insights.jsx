@@ -57,11 +57,11 @@ const Insights = () => {
 					<img
 						src='https://randomuser.me/api/portraits/women/2.jpg'
 						alt='user'
-						className='w-20 h-20 rounded-full border-4 border-red-400'
+						className='w-20 h-20 rounded-full border-4 border-[#ff8169]'
 					/>
 					<div>
 						<h1 className='font-bold text-lg'>Lorem, ipsum.</h1>
-						<p className='text-sm text-red-400'>
+						<p className='text-sm text-[#ff8169]'>
 							Lorem, ipsum dolor.
 						</p>
 					</div>

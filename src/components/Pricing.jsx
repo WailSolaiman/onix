@@ -2,10 +2,14 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaCheck } from 'react-icons/fa6'
 
+import firstPlanBG from '../assets/first-plan-bg.png'
+import secondPlanBG from '../assets/second-plan-bg.png'
+import thirdPlanBG from '../assets/third-plan-bg.png'
+
 const pricingList = [
 	{
 		title: 'Free',
-		popular: 0,
+		value: 'Starter',
 		price: 0,
 		description:
 			'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
@@ -19,10 +23,11 @@ const pricingList = [
 		],
 		href: '#',
 		billing: '/month',
+		bgImage: firstPlanBG,
 	},
 	{
 		title: 'Premium',
-		popular: 1,
+		value: 'Most Popular',
 		price: 10,
 		description:
 			'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
@@ -36,14 +41,15 @@ const pricingList = [
 		],
 		href: '#',
 		billing: '/month',
+		bgImage: secondPlanBG,
 	},
 	{
 		title: 'Enterprise',
-		popular: 0,
+		value: 'most value',
 		price: 99,
 		description:
 			'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
-		buttonText: 'Buy Now',
+		buttonText: 'Most Value',
 		benefitList: [
 			'10 Team member',
 			'8 GB Storage',
@@ -53,6 +59,7 @@ const pricingList = [
 		],
 		href: '#',
 		billing: '/year',
+		bgImage: thirdPlanBG,
 	},
 ]
 
@@ -96,24 +103,21 @@ const Pricing = () => {
 						whileInView='visible'
 						viewport={{ amount: 0.5 }}
 						variants={cardVariants}
-						className='shadow-xl rounded-lg bg-white p-8 hover:shadow-2xl 
-						transition-shadow duration-300'>
-						<div className='block'>
-							<div className='flex items-center justify-between mb-4'>
-								<h2 className='text-lg font-semibold text-gray-800'>
+						className={`bg-cover bg-center h-full shadow-xl rounded-sm p-8 hover:shadow-2xl 
+						transition-shadow duration-300`}
+						style={{ backgroundImage: `url(${pricing.bgImage})` }}>
+						<div className='relative block'>
+							<div className='text-center mb-4'>
+								<div className='text-sm text-[#9acdf3] font-bold'>
+									{pricing.value}
+								</div>
+							</div>
+							<div className='flex items-center justify-center mb-4'>
+								<h2 className='text-3xl md:text-4xl font-bold text-gray-800'>
 									{pricing.title}
 								</h2>
-								{pricing.popular ? (
-									<div
-										variant='secondary'
-										className='text-sm text-red-500 font-bold underline'>
-										most popular
-									</div>
-								) : (
-									''
-								)}
 							</div>
-							<div className='flex items-baseline space-x-2'>
+							<div className='flex justify-center items-baseline space-x-2'>
 								<span className='text-4xl font-extrabold text-gray-900'>
 									${pricing.price}
 								</span>
@@ -122,7 +126,7 @@ const Pricing = () => {
 								</span>
 							</div>
 
-							<div className='mt-3 text-gray-600'>
+							<div className='mt-3 text-center text-gray-600'>
 								{pricing.description}
 							</div>
 						</div>
@@ -130,8 +134,8 @@ const Pricing = () => {
 						<div className='my-6'>
 							<a
 								href={pricing.href}
-								className='inline-block w-full text-center bg-red-500 
-								text-white py-3 rounded-md hover:bg-red-600 transition-colors'>
+								className='inline-block w-full text-center bg-[#9acdf3] 
+								text-white py-3 rounded-md hover:bg-[#ff8169] transition-colors'>
 								{pricing.buttonText}
 							</a>
 						</div>
@@ -144,7 +148,7 @@ const Pricing = () => {
 									<span
 										key={benefit}
 										className='flex items-center'>
-										<FaCheck className='text-red-500' />
+										<FaCheck className='text-[#9acdf3]' />
 										<h3 className='ml-2 text-gray-700'>
 											{benefit}
 										</h3>

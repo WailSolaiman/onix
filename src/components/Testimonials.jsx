@@ -1,31 +1,31 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const Testimonials = () => {
-	const testimonialsData = [
-		{
-			image: 'https://picsum.photos/id/43/500/500',
-			name: 'John Doe',
-			position: 'Founder',
-			feedback:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-		},
-		{
-			image: 'https://picsum.photos/id/47/500/500',
-			name: 'John Doe',
-			position: 'Developer',
-			feedback:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-		},
-		{
-			image: 'https://picsum.photos/id/22/500/500',
-			name: 'John Doe',
-			position: 'Crative Lead',
-			feedback:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-		},
-	]
+const testimonialsData = [
+	{
+		image: 'https://picsum.photos/id/43/500/500',
+		name: 'John Doe',
+		position: 'Founder',
+		feedback:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+	},
+	{
+		image: 'https://picsum.photos/id/47/500/500',
+		name: 'John Doe',
+		position: 'Developer',
+		feedback:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+	},
+	{
+		image: 'https://picsum.photos/id/22/500/500',
+		name: 'John Doe',
+		position: 'Crative Lead',
+		feedback:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+	},
+]
 
+const Testimonials = () => {
 	const testimonialsVariant = {
 		hidden: { opacity: 0, y: 50 },
 		visible: {
@@ -45,7 +45,7 @@ const Testimonials = () => {
 					initial={{ opacity: 0, y: -50 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					className='space-y-5'>
+					className='lg:w-1/2 space-y-8 mb-10 m-auto'>
 					<h1 className='text-4xl md:text-6xl font-bold text-center text-[#ff8169]'>
 						Client Reviews
 					</h1>

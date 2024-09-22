@@ -6,6 +6,7 @@ import Pricing from './components/Pricing'
 import Faq from './components/Faq'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
+import Projects from './components/Projects'
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Hero />
 			<Insights />
 			<Stats />
+			<Projects />
 			<Pricing />
 			<Testimonials />
 			<Faq />
