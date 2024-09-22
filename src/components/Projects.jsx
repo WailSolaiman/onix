@@ -1,43 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import portfolio1Image from '../assets/video-big-thumb-01.png'
-import portfolio2Image from '../assets/video-big-thumb-02.png'
-import portfolio3Image from '../assets/video-big-thumb-03.png'
-import portfolio4Image from '../assets/video-big-thumb-04.png'
-
-const projectsData = [
-	{
-		image: portfolio1Image,
-		name: 'John Doe',
-		position: 'Founder',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: portfolio2Image,
-		name: 'John Doe',
-		position: 'Developer',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: portfolio3Image,
-		name: 'John Doe',
-		position: 'Crative Lead',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: portfolio4Image,
-		name: 'John Doe',
-		position: 'Crative Lead',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-]
+import { data } from '../constants'
 
 const Projects = () => {
+	const { portfolio } = data
 	const cardVariants = {
 		hidden: { opacity: 0, y: 50 },
 		visible: {
@@ -58,15 +25,14 @@ const Projects = () => {
 					transition={{ duration: 0.5 }}
 					className='lg:w-1/2 space-y-8 mb-10 m-auto'>
 					<h1 className='text-4xl md:text-6xl font-bold text-center'>
-						Portfolio
+						{portfolio.title}
 					</h1>
 					<p className='text-sm md:text-xl font-semibold text-center'>
-						Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Voluptatibus veritatis excepturi minus.
+						{portfolio.description}
 					</p>
 				</motion.div>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-10'>
-					{projectsData.map((item, index) => (
+					{portfolio.projects.map((item, index) => (
 						<motion.div
 							initial='hidden'
 							whileInView='visible'

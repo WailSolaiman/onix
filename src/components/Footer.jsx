@@ -1,81 +1,55 @@
 import React from 'react'
 
+import { data } from '../constants'
+
 const Footer = () => {
+	const { footer } = data
 	return (
 		<footer className='pt-20 pb-6 bg-black'>
 			<div className='w-4/5 m-auto grid md:grid-cols-4 gap-6 px-4'>
 				<div>
 					<h2 className='text-xl font-bold mb-2 text-white'>
-						About Us
+						{footer.title}
 					</h2>
-					<p className='text-gray-400'>
-						Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Similique tempore qui libero, incidunt quae vel?
-					</p>
+					<p className='text-gray-400'>{footer.description}</p>
 				</div>
 				<div>
 					<h2 className='text-xl font-bold mb-2 text-white'>
-						Customer Service
+						{footer.title2}
 					</h2>
 					<ul>
-						<li>
-							<a
-								href='#'
-								className='text-gray-400 hover:text-[#ff8169]'>
-								Contact Us
-							</a>
-						</li>
-						<li>
-							<a
-								href='#'
-								className='text-gray-400 hover:text-[#ff8169]'>
-								FAQs
-							</a>
-						</li>
-						<li>
-							<a
-								href='#'
-								className='text-gray-400 hover:text-[#ff8169]'>
-								Privacy Policy
-							</a>
-						</li>
+						{footer.title2Links.map((item, index) => (
+							<li key={index}>
+								<a
+									href={item.href}
+									className='text-gray-400 hover:text-[#ff8169]'>
+									{item.text}
+								</a>
+							</li>
+						))}
 					</ul>
 				</div>
 				<div>
 					<h2 className='text-xl font-bold mb-2 text-white'>
-						Follow Us
+						{footer.title3}
 					</h2>
 					<ul>
-						<li>
-							<a
-								href='#'
-								className='text-gray-400 hover:text-[#ff8169]'>
-								Facebook
-							</a>
-						</li>
-						<li>
-							<a
-								href='#'
-								className='text-gray-400 hover:text-[#ff8169]'>
-								YouTube
-							</a>
-						</li>
-						<li>
-							<a
-								href='#'
-								className='text-gray-400 hover:text-[#ff8169]'>
-								Instagram
-							</a>
-						</li>
+						{footer.title3Links.map((item, index) => (
+							<li key={index}>
+								<a
+									href={item.href}
+									className='text-gray-400 hover:text-[#ff8169]'>
+									{item.text}
+								</a>
+							</li>
+						))}
 					</ul>
 				</div>
 				<div>
 					<h2 className='text-xl font-bold mb-2 text-white'>
-						News Letter
+						{footer.title4}
 					</h2>
-					<p className='text-gray-400'>
-						Enter your email to get the latest news and updates
-					</p>
+					<p className='text-gray-400'>{footer.title4Description}</p>
 					<form className='mt-4'>
 						<input
 							type='email'

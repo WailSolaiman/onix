@@ -1,13 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import service3Image from '../assets/service-icon-03.png'
-import service4Image from '../assets/service-icon-04.png'
 import bgImage from '../assets/contact-dec.png'
-
 import statsImage from '../assets/stats.png'
 
+import { data } from '../constants'
+
 const Stats = () => {
+	const { stats } = data
 	const imageVariant = {
 		hidden: { opacity: 0, x: -80 },
 		visible: {
@@ -57,60 +57,34 @@ const Stats = () => {
 				</div>
 				<div className='lg:w-[55%] space-y-8'>
 					<h1 className='text-4xl md:text-6xl font-bold text-[#ff8169]'>
-						Over 30.000
+						{stats.title}
 					</h1>
-					<p className='md:text-2xl font-bold'> Lorem ipsum dolor.</p>
+					<p className='md:text-2xl font-bold'>{stats.subtitle}</p>
 					<div className='flex flex-col md:flex-row lg:flex-col justify-between gap-4'>
-						<motion.div
-							initial='hidden'
-							whileInView='visible'
-							viewport={{ amount: 0.5 }}
-							variants={cardVariants}
-							className='space-y-5 shadow-md p-5 mb-5 md:mb-0 rounded-lg'>
-							<div className='flex items-center space-x-2'>
-								<span className='p-3'>
-									<img
-										src={service3Image}
-										alt='service'
-										width={40}
-										height={40}
-									/>
-								</span>
-								<h1 className='font-semibold'>
-									Data Validation
-								</h1>
-							</div>
-							<p>
-								{' '}
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit.
-							</p>
-						</motion.div>
-						<motion.div
-							initial='hidden'
-							whileInView='visible'
-							viewport={{ amount: 0.5 }}
-							variants={cardVariants}
-							className='space-y-5 shadow-md p-5 mb-5 md:mb-0 rounded-lg'>
-							<div className='flex items-center space-x-2'>
-								<span className='p-3'>
-									<img
-										src={service4Image}
-										alt='service'
-										width={40}
-										height={40}
-									/>
-								</span>
-								<h1 className='font-semibold'>
-									Data Validation
-								</h1>
-							</div>
-							<p>
-								{' '}
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit.
-							</p>
-						</motion.div>
+						{stats.cards.map((item, index) => (
+							<motion.div
+								key={index}
+								initial='hidden'
+								whileInView='visible'
+								viewport={{ amount: 0.5 }}
+								variants={cardVariants}
+								className='space-y-5 shadow-md p-5 mb-5 md:mb-0 rounded-lg'>
+								<div className='flex items-center space-x-2'>
+									<span className='p-3'>
+										<img
+											src={item.icon}
+											alt='service'
+											width={40}
+											height={40}
+										/>
+									</span>
+									<h1 className='font-semibold'>
+										{item.title}
+									</h1>
+								</div>
+								<p> {item.description}</p>
+							</motion.div>
+						))}
 					</div>
 				</div>
 			</div>

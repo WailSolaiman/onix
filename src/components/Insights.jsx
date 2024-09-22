@@ -1,25 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import service1Image from '../assets/service-icon-01.png'
-import service2Image from '../assets/service-icon-02.png'
 import bgImage from '../assets/portfolio-left-dec.png'
 
+import { data } from '../constants'
+
 const Insights = () => {
-	const data = [
-		{
-			title: 'title',
-			date: 'July 2023',
-			icon: service1Image,
-			description: 'bla bla',
-		},
-		{
-			title: 'title2',
-			date: 'July 2024',
-			icon: service2Image,
-			description: 'bla bla bla',
-		},
-	]
+	const { insights } = data
 
 	const cardVariants = {
 		hidden: { opacity: 0, scale: 0.8 },
@@ -49,32 +36,30 @@ const Insights = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 					className='text-2xl font-bold'>
-					Lorem, ipsum dolor.
+					{insights.title}
 				</motion.h2>
 				<motion.p
 					initial={{ opacity: 0, y: -50 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Asperiores molestiae facilis odit. Lorem ipsum dolor, sit
-					amet consectetur adipisicing elit. facilis odit.
+					{insights.quote}
 				</motion.p>
 				<div className='flex items-center space-x-2'>
 					<img
-						src='https://randomuser.me/api/portraits/women/2.jpg'
+						src={insights.image}
 						alt='user'
 						className='w-20 h-20 rounded-full border-4 border-[#ff8169]'
 					/>
 					<div>
-						<h1 className='font-bold text-lg'>Lorem, ipsum.</h1>
-						<p className='text-sm text-[#ff8169]'>
-							Lorem, ipsum dolor.
+						<h1 className='font-bold text-lg'>{insights.name}</h1>
+						<p className='text-sm font-bold text-[#ff8169]'>
+							{insights.position}
 						</p>
 					</div>
 				</div>
 			</div>
 			<div className='md:w-1/2 flex flex-col lg:flex-row gap-2 lg:space-x-5 space-y-5 md:space-y-0'>
-				{data.map((item, index) => (
+				{insights.cards.map((item, index) => (
 					<motion.div
 						key={index}
 						initial='hidden'

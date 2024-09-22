@@ -3,52 +3,10 @@ import { motion } from 'framer-motion'
 
 import bgImage from '../assets/tables-left-dec.png'
 
-const testimonialsData = [
-	{
-		image: 'https://picsum.photos/id/43/500/500',
-		name: 'John Doe',
-		position: 'Founder',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: 'https://picsum.photos/id/47/500/500',
-		name: 'John Doe',
-		position: 'Developer',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: 'https://picsum.photos/id/22/500/500',
-		name: 'John Doe',
-		position: 'Crative Lead',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: 'https://picsum.photos/id/43/500/500',
-		name: 'John Doe',
-		position: 'Founder',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: 'https://picsum.photos/id/47/500/500',
-		name: 'John Doe',
-		position: 'Developer',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-	{
-		image: 'https://picsum.photos/id/22/500/500',
-		name: 'John Doe',
-		position: 'Crative Lead',
-		feedback:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
-	},
-]
+import { data } from '../constants'
 
 const Testimonials = () => {
+	const { testimonials } = data
 	const testimonialsVariant = {
 		hidden: { opacity: 0, y: 50 },
 		visible: {
@@ -76,15 +34,14 @@ const Testimonials = () => {
 					transition={{ duration: 0.5 }}
 					className='lg:w-1/2 space-y-8 mb-10 m-auto'>
 					<h1 className='text-4xl md:text-6xl font-bold text-center text-[#ff8169]'>
-						Client Reviews
+						{testimonials.title}
 					</h1>
 					<p className='text-sm md:text-xl font-semibold text-center'>
-						Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Voluptatibus veritatis excepturi minus.
+						{testimonials.description}
 					</p>
 				</motion.div>
 				<div className='grid grid-cols-1 lg:grid-cols-3 gap-4 py-10'>
-					{testimonialsData.map((item, index) => (
+					{testimonials.reviews.map((item, index) => (
 						<motion.div
 							initial='hidden'
 							whileInView='visible'

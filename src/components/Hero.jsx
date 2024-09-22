@@ -4,7 +4,10 @@ import { motion } from 'framer-motion'
 import heroImage from '../assets/hero.png'
 import bgImage from '../assets/baner-dec-left.png'
 
+import { data } from '../constants'
+
 const Hero = () => {
+	const { hero } = data
 	const textVariant = {
 		hidden: { opacity: 0, x: -100 },
 		visible: {
@@ -45,7 +48,7 @@ const Hero = () => {
 						whileInView='visible'
 						viewport={{ amount: 0.5 }}
 						variants={textVariant}>
-						Lorem ipsum dolor
+						{hero.subHeader}
 					</motion.p>
 					<motion.h1
 						initial='hidden'
@@ -53,7 +56,7 @@ const Hero = () => {
 						viewport={{ amount: 0.5 }}
 						variants={textVariant}
 						className='text-5xl md:text-7xl font-bold'>
-						Lorem ipsum dolor sit
+						{hero.header}
 					</motion.h1>
 					<motion.p
 						initial='hidden'
@@ -61,12 +64,11 @@ const Hero = () => {
 						viewport={{ amount: 0.5 }}
 						variants={textVariant}
 						className='md:text-lg'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Aliquam magni earum deserunt, repellat cumque officia
+						{hero.description}
 					</motion.p>
 					<div className='flex space-x-5'>
 						<button className='px-5 py-3 rounded-full font-semibold shadow-md bg-[#9acdf3] text-black hover:bg-[#ff8169]'>
-							Get Started
+							{hero.buttonText}
 						</button>
 					</div>
 				</div>
