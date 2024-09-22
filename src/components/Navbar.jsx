@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import logo from '../assets/logo.png'
+
 const fadeIn = {
 	initial: { opacity: 0 },
 	animate: { opacity: 1 },
@@ -9,30 +11,15 @@ const fadeIn = {
 
 const hoverTapEffect = {
 	whileHover: {
-		textShadow: '0 0 8px rgba(0, 200, 255, 0.8)', // Adds a glow effect on hover
-		color: '#00bfff', // Changes text color on hover
-	},
-	whileTap: {
-		textShadow: 'none', // Removes glow on tap
-		color: '#1f2937', // Resets to original color
+		color: '#ff8169',
 	},
 }
 
-const buttonHoverEffect = {
-	whileHover: {
-		textShadow: '0 0 12px rgba(0, 200, 255, 0.8)', // More pronounced glow on hover
-		color: '#ffffff', // Change button text color
-	},
-	whileTap: {
-		textShadow: 'none', // Remove glow on tap
-		color: '#1f2937', // Reset color on tap
-	},
-}
-
-// Reusable Animated List Item component
 const AnimatedLi = ({ children, href }) => (
 	<motion.li {...hoverTapEffect}>
-		<a href={href}>{children}</a>
+		<a className='font-bold' href={href}>
+			{children}
+		</a>
 	</motion.li>
 )
 
@@ -41,7 +28,7 @@ const Navbar = () => {
 
 	return (
 		<div className='w-4/5 m-auto flex justify-between items-center py-5'>
-			<h1 className='text-xl font-bold'>BetaTech</h1>
+			<img src={logo} alt='logo' width='94px' height='44px' />
 			<motion.ul
 				{...fadeIn}
 				className='hidden md:flex items-center space-x-5'>
@@ -53,12 +40,11 @@ const Navbar = () => {
 					</AnimatedLi>
 				))}
 			</motion.ul>
-			<motion.button
-				{...buttonHoverEffect}
-				className='px-5 py-2 border shadow-md text-black 
-				hover:bg-gradient-to-r hover:from-teal-400 hover:to-blue-500 rounded-full'>
+			<button
+				className='px-5 py-2 shadow-md text-white font-semibold bg-[#ff8169] 
+				hover:bg-[#9acdf3] rounded-full'>
 				Register
-			</motion.button>
+			</button>
 		</div>
 	)
 }

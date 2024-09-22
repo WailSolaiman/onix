@@ -46,13 +46,13 @@ const Testimonials = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 					className='space-y-5'>
-					<h1 className='text-4xl md:text-6xl font-bold text-center'>
+					<h1 className='text-4xl md:text-6xl font-bold text-center text-[#ff8169]'>
 						Client Reviews
 					</h1>
-					<h2 className='text-sm md:text-xl font-semibold text-center'>
+					<p className='text-sm md:text-xl font-semibold text-center'>
 						Lorem ipsum dolor, sit amet consectetur adipisicing
 						elit. Voluptatibus veritatis excepturi minus.
-					</h2>
+					</p>
 				</motion.div>
 				<div className='grid grid-cols-1 lg:grid-cols-3 gap-4 py-10'>
 					{testimonialsData.map((item, index) => (

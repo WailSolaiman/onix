@@ -1,19 +1,21 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { SiDatabricks, SiFloatplane } from 'react-icons/si'
+
+import service1Image from '../assets/service-icon-01.png'
+import service2Image from '../assets/service-icon-02.png'
 
 const Insights = () => {
 	const data = [
 		{
 			title: 'title',
 			date: 'July 2023',
-			icon: SiDatabricks,
+			icon: service1Image,
 			description: 'bla bla',
 		},
 		{
 			title: 'title2',
 			date: 'July 2024',
-			icon: SiFloatplane,
+			icon: service2Image,
 			description: 'bla bla bla',
 		},
 	]
@@ -55,17 +57,17 @@ const Insights = () => {
 					<img
 						src='https://randomuser.me/api/portraits/women/2.jpg'
 						alt='user'
-						className='w-12 h-12 rounded-full border-4'
+						className='w-20 h-20 rounded-full border-4 border-red-400'
 					/>
 					<div>
 						<h1 className='font-bold text-lg'>Lorem, ipsum.</h1>
-						<p className='text-sm text-gray-400'>
+						<p className='text-sm text-red-400'>
 							Lorem, ipsum dolor.
 						</p>
 					</div>
 				</div>
 			</div>
-			<div className='md:w-1/2 flex flex-col md:flex-row md:space-x-5 space-y-5 md:space-y-0'>
+			<div className='md:w-1/2 flex flex-col lg:flex-row gap-2 lg:space-x-5 space-y-5 md:space-y-0'>
 				{data.map((item, index) => (
 					<motion.div
 						key={index}
@@ -76,9 +78,12 @@ const Insights = () => {
 						className='w-full p-4 border-4 border-white/50 rounded-xl space-y-4'>
 						<div className='flex justify-between'>
 							<div className='space-y-2'>
-								<button className='p-3 rounded-full bg-violet-300 text-violet-800'>
-									{item.icon()}
-								</button>
+								<img
+									src={item.icon}
+									alt={item.title}
+									width={40}
+									height={40}
+								/>
 								<h1 className='text-xl font-bold'>
 									{item.title}
 								</h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { IoPlay } from 'react-icons/io5'
+
+import heroImage from '../assets/hero.png'
 
 const Hero = () => {
 	const textVariant = {
@@ -29,9 +30,9 @@ const Hero = () => {
 
 	return (
 		<div
-			className='w-4/5 m-auto py-20 flex flex-col md:flex-row justify-between 
+			className='w-4/5 m-auto mt-20 flex flex-col lg:flex-row justify-between 
 		items-center space-y-10 md:space-y-0'>
-			<div className='md:w-1/2 space-y-6'>
+			<div className='lg:w-1/2 space-y-6 my-10'>
 				<motion.p
 					initial='hidden'
 					whileInView='visible'
@@ -57,24 +58,16 @@ const Hero = () => {
 					Aliquam magni earum deserunt, repellat cumque officia
 				</motion.p>
 				<div className='flex space-x-5'>
-					<button className='px-5 py-3 rounded-full font-semibold bg-black text-white'>
-						Book
-					</button>
-					<button className='flex space-x-4 items-center border rounded-full px-4 shadow-md'>
-						<span
-							className='w-8 h-8 flex justify-center items-center bg-black 
-						text-white rounded-full'>
-							<IoPlay />
-						</span>
-						<span>Watch Video</span>
+					<button className='px-5 py-3 rounded-full font-semibold shadow-md bg-[#9acdf3] text-black hover:bg-[#ff8169]'>
+						Get Started
 					</button>
 				</div>
 			</div>
-			<div className='w-full md:w-1/3'>
+			<div className='lg:w-1/2'>
 				<motion.img
-					src='https://picsum.photos/id/43/900/900'
+					src={heroImage}
 					alt='beta'
-					className='w-full'
+					className=''
 					initial='hidden'
 					whileInView='visible'
 					viewport={{ amount: 0.5 }}

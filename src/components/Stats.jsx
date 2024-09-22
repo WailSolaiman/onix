@@ -2,6 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaChartLine } from 'react-icons/fa'
 
+import service3Image from '../assets/service-icon-03.png'
+import service4Image from '../assets/service-icon-04.png'
+
+import statsImage from '../assets/stats.png'
+
 const Stats = () => {
 	const imageVariant = {
 		hidden: { opacity: 0, x: -80 },
@@ -30,13 +35,13 @@ const Stats = () => {
 	}
 
 	return (
-		<div className='py-20 bg-white'>
+		<div className='py-14 bg-white'>
 			<div
-				className='w-4/5 m-auto flex flex-col lg:flex-row 
+				className='w-4/5 max-w-screen-2xl m-auto flex flex-col lg:flex-row 
 			item-center justify-between space-y-10 lg:space-y-0'>
-				<div className='w-full md:w-[40%]'>
+				<div className='md:w-[70%] m-auto'>
 					<motion.img
-						src='https://picsum.photos/id/64/3000/3000'
+						src={statsImage}
 						alt='stats'
 						initial='hidden'
 						whileInView='visible'
@@ -45,15 +50,11 @@ const Stats = () => {
 					/>
 				</div>
 				<div className='lg:w-[55%] space-y-8'>
-					<h1 className='text-4xl md:text-6xl font-bold'>
+					<h1 className='text-4xl md:text-6xl font-bold text-[#ff8169]'>
 						Over 30.000
 					</h1>
-					<p className='md:text-2xl font-bold'>
-						{' '}
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Laudantium veniam maxime eos suscipit odio.
-					</p>
-					<div className='flex flex-wrap lg:flex-nowrap justify-between gap-4'>
+					<p className='md:text-2xl font-bold'> Lorem ipsum dolor.</p>
+					<div className='flex flex-col md:flex-row lg:flex-col justify-between gap-4'>
 						<motion.div
 							initial='hidden'
 							whileInView='visible'
@@ -61,8 +62,13 @@ const Stats = () => {
 							variants={cardVariants}
 							className='space-y-5 shadow-md p-5 mb-5 md:mb-0 rounded-lg'>
 							<div className='flex items-center space-x-2'>
-								<span className='p-3 rounded-full bg-violet-300 text-violet-800'>
-									<FaChartLine />
+								<span className='p-3'>
+									<img
+										src={service3Image}
+										alt='service'
+										width={40}
+										height={40}
+									/>
 								</span>
 								<h1 className='font-semibold'>
 									Data Validation
@@ -71,8 +77,7 @@ const Stats = () => {
 							<p>
 								{' '}
 								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Laudantium veniam maxime eos
-								suscipit odio.
+								adipisicing elit.
 							</p>
 						</motion.div>
 						<motion.div
@@ -82,8 +87,13 @@ const Stats = () => {
 							variants={cardVariants}
 							className='space-y-5 shadow-md p-5 mb-5 md:mb-0 rounded-lg'>
 							<div className='flex items-center space-x-2'>
-								<span className='p-3 rounded-full bg-violet-300 text-violet-800'>
-									<FaChartLine />
+								<span className='p-3'>
+									<img
+										src={service4Image}
+										alt='service'
+										width={40}
+										height={40}
+									/>
 								</span>
 								<h1 className='font-semibold'>
 									Data Validation
@@ -92,8 +102,7 @@ const Stats = () => {
 							<p>
 								{' '}
 								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Laudantium veniam maxime eos
-								suscipit odio.
+								adipisicing elit.
 							</p>
 						</motion.div>
 					</div>
