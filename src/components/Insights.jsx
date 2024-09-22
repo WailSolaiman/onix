@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 import service1Image from '../assets/service-icon-01.png'
 import service2Image from '../assets/service-icon-02.png'
+import bgImage from '../assets/portfolio-left-dec.png'
 
 const Insights = () => {
 	const data = [
@@ -36,7 +37,12 @@ const Insights = () => {
 	return (
 		<div
 			className='w-4/5 m-auto py-20 flex flex-col md:flex-row justify-between 
-			space-y-10 md:space-y-0'>
+			space-y-10 md:space-y-0'
+			style={{
+				backgroundImage: `url(${bgImage})`,
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'top 10px right',
+			}}>
 			<div className='md:w-1/3 space-y-4'>
 				<motion.h2
 					initial={{ opacity: 0, y: -50 }}

@@ -1,7 +1,30 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import bgImage from '../assets/tables-left-dec.png'
+
 const testimonialsData = [
+	{
+		image: 'https://picsum.photos/id/43/500/500',
+		name: 'John Doe',
+		position: 'Founder',
+		feedback:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+	},
+	{
+		image: 'https://picsum.photos/id/47/500/500',
+		name: 'John Doe',
+		position: 'Developer',
+		feedback:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+	},
+	{
+		image: 'https://picsum.photos/id/22/500/500',
+		name: 'John Doe',
+		position: 'Crative Lead',
+		feedback:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+	},
 	{
 		image: 'https://picsum.photos/id/43/500/500',
 		name: 'John Doe',
@@ -39,7 +62,13 @@ const Testimonials = () => {
 	}
 
 	return (
-		<div className='py-20 bg-white'>
+		<div
+			className='py-20'
+			style={{
+				backgroundImage: `url(${bgImage})`,
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'left',
+			}}>
 			<div className='w-4/5 m-auto space-y-8'>
 				<motion.div
 					initial={{ opacity: 0, y: -50 }}

@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaChartLine } from 'react-icons/fa'
 
 import service3Image from '../assets/service-icon-03.png'
 import service4Image from '../assets/service-icon-04.png'
+import bgImage from '../assets/contact-dec.png'
 
 import statsImage from '../assets/stats.png'
 
@@ -35,7 +35,13 @@ const Stats = () => {
 	}
 
 	return (
-		<div className='py-14 bg-white'>
+		<div
+			className='py-20 bg-white'
+			style={{
+				backgroundImage: `url(${bgImage})`,
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'right',
+			}}>
 			<div
 				className='w-4/5 max-w-screen-2xl m-auto flex flex-col lg:flex-row 
 			item-center justify-between space-y-10 lg:space-y-0'>

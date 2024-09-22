@@ -50,7 +50,7 @@ const Projects = () => {
 		},
 	}
 	return (
-		<div className='py-20 border-b-2 border-[#ff8169]'>
+		<div className='py-20'>
 			<div className='w-4/5 m-auto space-y-8'>
 				<motion.div
 					initial={{ opacity: 0, y: -50 }}
