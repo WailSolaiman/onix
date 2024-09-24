@@ -26,6 +26,6 @@ This project is licensed under the MIT License.
 
 ## Link
 
-([Click Here](https://onix-chi.vercel.app/))
+[Click Here..](https://onix-chi.vercel.app/)
 
 Created with ❤️ by Wail Solaiman.
