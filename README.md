@@ -1,8 +1,49 @@
-# React + Vite
+# Onix - Elevate Your Digital Presence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Onix is a cutting-edge digital and web agency specializing in modern web solutions, UX/UI design, and SEO services. Our goal is to help businesses build, enhance, and monetize their online presence with responsive and innovative designs.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Framer Motion Animations**: Enhance user interaction with smooth, animated transitions using the Framer Motion library.
+-   **Tailwind CSS**: A utility-first CSS framework that makes it easy to build responsive and modern interfaces.
+-   **React**: Build fast and scalable user interfaces with one of the most popular JavaScript libraries.
+-   **SEO-Optimized**: Every page and component is designed with SEO best practices in mind to help improve search engine visibility.
+-   **UI/UX Focused**: Prioritizing a seamless user experience with aesthetically pleasing and highly functional design patterns.
+
+## Tech Stack
+
+-   **Frontend**: React, Framer Motion, Tailwind CSS
+-   **Build Tool**: Vite
+-   **Linting & Code Quality**: ESLint, with support for React and Hooks
+-   **Styling**: PostCSS and Autoprefixer for optimized and cross-browser compatible CSS
+-   **Icons**: React Icons for easy-to-use and scalable icons across the app
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `npm run build`
+
+Builds the app for production, optimizing for the best performance.
+
+### `npm run preview`
+
+Previews the production build locally before deployment.
+
+### `npm run lint`
+
+Lints the codebase to ensure best practices and coding standards.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Link
+
+Created with ❤️ by Wail Solaiman.
