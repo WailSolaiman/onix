@@ -8,18 +8,6 @@ import { data } from '../constants'
 
 const Pricing = () => {
 	const { pricing } = data
-	const cardVariants = {
-		hidden: { opacity: 0, scale: 0.8 },
-		visible: (i = 1.5) => ({
-			opacity: 1,
-			scale: 1,
-			transition: {
-				delay: i * 0.2,
-				duration: i * 0.5,
-				ease: 'easeInOut',
-			},
-		}),
-	}
 
 	return (
 		<div
@@ -27,32 +15,37 @@ const Pricing = () => {
 			style={{
 				backgroundImage: `url(${bgImage})`,
 				backgroundRepeat: 'repeat',
-				backgroundPosition: 'center',
+				backgroundPosition: 'left',
 			}}>
 			<div
 				className='w-4/5 m-auto flex flex-col 
 		justify-between items-center space-y-10 lg:space-y-0'>
 				<motion.div
-					initial={{ opacity: 0, y: 40 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5 }}
-					className='lg:w-1/2 space-y-8 mb-10'>
-					<h1 className='text-4xl md:text-6xl font-bold text-center'>
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ delay: 0.5, duration: 0.5 }}
+					viewport={{ amount: 0.5, once: true }}
+					className='lg:w-1/2 space-y-8 m-auto mb-8'>
+					<h1 className='text-5xl md:text-7xl font-bold text-center'>
 						{pricing.title}
 					</h1>
-					<p className='text-sm md:text-xl font-semibold text-center'>
+					<p className='text-lg md:text-xl font-semibold text-center'>
 						{pricing.description}
 					</p>
 				</motion.div>
 
-				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
 					{pricing.list.map((item, index) => (
 						<motion.div
 							key={index}
-							initial='hidden'
-							whileInView='visible'
-							viewport={{ amount: 0.5 }}
-							variants={cardVariants}
+							initial={{ opacity: 0, scale: 0.8 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{
+								delay: index * 0.2,
+								duration: 0.5,
+								ease: 'easeInOut',
+							}}
+							viewport={{ amount: 0.5, once: true }}
 							className={`bg-cover bg-center h-full shadow-xl rounded-sm p-8 hover:shadow-2xl 
 						transition-shadow duration-300`}
 							style={{
@@ -69,11 +62,11 @@ const Pricing = () => {
 										{item.title}
 									</h2>
 								</div>
-								<div className='flex justify-center items-baseline space-x-2'>
+								<div className='flex flex-col justify-center items-center space-x-2'>
 									<span className='text-4xl font-extrabold text-gray-900'>
 										${item.price}
 									</span>
-									<span className='text-lg text-gray-500'>
+									<span className='text-sm text-gray-500'>
 										{item.billing}
 									</span>
 								</div>
@@ -101,7 +94,7 @@ const Pricing = () => {
 											key={index}
 											className='flex items-center'>
 											<FaCheck className='text-[#9acdf3]' />
-											<h3 className='ml-2 text-gray-700'>
+											<h3 className='ml-2 text-gray-700 font-semibold'>
 												{benefit}
 											</h3>
 										</span>

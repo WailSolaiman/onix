@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 import bgImage from '../assets/videos-left-dec.png'
 
@@ -26,7 +27,17 @@ const Faq = () => {
 					{faq.title}
 				</h1>
 				{faq.list.map((item, index) => (
-					<div key={index} className='mb-4 shadow-lg'>
+					<motion.div
+						key={index}
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{
+							delay: index * 0.1,
+							duration: 0.5,
+							ease: 'easeInOut',
+						}}
+						viewport={{ amount: 0.1 }}
+						className='mb-4 shadow-lg'>
 						<div
 							onClick={() => toggleFaq(index)}
 							className='flex justify-between items-center bg-white/50 px-4 py-3 rounded-lg cursor-pointer'>
@@ -43,7 +54,7 @@ const Faq = () => {
 							}`}>
 							<p className='p-4 text-gray-400'>{item.answer}</p>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</div>

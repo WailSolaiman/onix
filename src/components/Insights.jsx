@@ -8,19 +8,6 @@ import { data } from '../constants'
 const Insights = () => {
 	const { insights } = data
 
-	const cardVariants = {
-		hidden: { opacity: 0, scale: 0.8 },
-		visible: (i = 1) => ({
-			opacity: 1,
-			scale: 1,
-			transition: {
-				delay: i * 0.2,
-				duration: i * 0.5,
-				ease: 'easeInOut',
-			},
-		}),
-	}
-
 	return (
 		<div
 			className='w-4/5 m-auto py-20 flex flex-col md:flex-row justify-between 
@@ -62,10 +49,14 @@ const Insights = () => {
 				{insights.cards.map((item, index) => (
 					<motion.div
 						key={index}
-						initial='hidden'
-						whileInView='visible'
+						initial={{ opacity: 0, scale: 0.8 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{
+							delay: index * 0.2,
+							duration: 0.5,
+							ease: 'easeInOut',
+						}}
 						viewport={{ amount: 0.5 }}
-						variants={cardVariants}
 						className='w-full p-4 border-4 border-white/50 rounded-xl space-y-4'>
 						<div className='flex justify-between'>
 							<div className='space-y-2'>

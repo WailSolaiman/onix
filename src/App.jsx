@@ -7,6 +7,8 @@ import Faq from './components/Faq'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 import Projects from './components/Projects'
+import Team from './components/Team'
+import Contact from './components/contact'
 
 function App() {
 	return (
@@ -16,9 +18,11 @@ function App() {
 			<Insights />
 			<Stats />
 			<Projects />
+			<Team />
 			<Pricing />
 			<Testimonials />
 			<Faq />
+			<Contact />
 			<Footer />
 		</div>
 	)

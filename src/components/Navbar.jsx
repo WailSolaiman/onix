@@ -24,7 +24,7 @@ const AnimatedLi = ({ children, href }) => (
 )
 
 const Navbar = () => {
-	const menuItems = ['Portfolio', 'Our Team', 'Careers', 'About']
+	const menuItems = ['Portfolio', 'Our Team', 'Pricing', 'FAQs', 'Contact Us']
 
 	return (
 		<div className='w-4/5 m-auto flex justify-between items-center py-5'>

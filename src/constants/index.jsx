@@ -12,227 +12,317 @@ import thirdPlanBG from '../assets/third-plan-bg.png'
 
 export const data = {
 	hero: {
-		subHeader: 'Lorem ipsum dolor',
-		header: 'Lorem ipsum dolor sit Dolor',
+		subHeader: 'Professional Web Design & Development',
+		header: 'Elevate Your Digital Presence',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni earum deserunt, repellat cumque officia.',
-		buttonText: 'Get Started',
+			'At Onix Digital Agency, we craft cutting-edge websites, intuitive user interfaces, and seamless digital experiences to grow your business.',
+		buttonText: 'Start Your Project',
 	},
 	insights: {
-		title: 'Lorem, ipsum dolor.',
-		quote: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores molestiae facilis odit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. facilis odit.',
-		name: 'Lara Croft',
-		position: 'Onix SEO',
+		title: 'Innovative Solutions for Your Business',
+		quote: '“Onix Digital Agency will help transform your online presence with our expertise in SEO and design!S”',
+		name: 'Lara Lu-Kane',
+		position: 'SEO Specialist, Onix Digital',
 		image: 'https://randomuser.me/api/portraits/women/2.jpg',
 		cards: [
 			{
-				title: 'feature 1',
+				title: 'UI/UX Design',
 				field: 'UI/UX',
 				icon: service1Image,
-				description: 'bla bla',
+				description:
+					'Crafting user-friendly and visually appealing designs that engage and delight your audience.',
 			},
 			{
-				title: 'feature 2',
+				title: 'Web Design',
 				field: 'Web Design',
 				icon: service2Image,
-				description: 'bla bla bla',
+				description:
+					'Creating modern and responsive websites tailored to your brand’s vision and goals.',
 			},
 		],
 	},
 	stats: {
-		title: 'Over 3.000',
-		subtitle: 'Lorem ipsum dolorr.',
+		title: 'Results That Matter',
+		subtitle: 'Over 3,000 Satisfied Clients',
 		cards: [
 			{
-				title: 'feature 1',
-				icon: service3Image,
-				description: 'bla bla',
+				title: 'UI/UX Projects',
+				icon: service1Image,
+				description:
+					'Crafting unique user experiences across various industries for digital success.',
 			},
 			{
-				title: 'feature 2',
+				title: 'SEO Success',
 				icon: service4Image,
-				description: 'bla bla bla',
+				description:
+					'Boosting search rankings and driving targeted traffic to grow your business.',
+			},
+			{
+				title: 'Monetization Strategies',
+				icon: service3Image,
+				description:
+					'Maximizing revenue potential with tailored monetization strategies for your business.',
+			},
+			{
+				title: 'Marketing Growth',
+				icon: service2Image,
+				description:
+					'Building impactful digital marketing strategies that boost brand visibility.',
 			},
 		],
 	},
 	portfolio: {
-		title: 'Portfolio',
-		description: 'lorem',
+		title: 'Our Work',
+		description:
+			'Explore a selection of our recent projects, showcasing our expertise in design and development.',
 		projects: [
 			{
 				image: portfolio1Image,
-				name: 'lorem ipsum',
-				position: 'UI/UX',
+				name: 'Tech Innovators',
+				position: 'UI/UX Design',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“Onix Digital delivered a design that truly reflects our brand and vision. Highly satisfied!”',
 			},
 			{
 				image: portfolio2Image,
-				name: 'lorem ipsum',
+				name: 'PrintHub Solutions',
 				position: 'Print Design',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“From concept to execution, Onix provided exceptional service and quality results.”',
 			},
 			{
 				image: portfolio3Image,
-				name: 'lorem ipsum',
+				name: 'Creative Minds',
 				position: 'Web Design',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“Our new website is modern, responsive, and exactly what we needed to engage our customers.”',
 			},
 			{
 				image: portfolio4Image,
-				name: 'lorem ipsum',
-				position: 'Management',
+				name: 'Business Solutions Co.',
+				position: 'Project Management',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“Onix’s team managed the entire web development project flawlessly, delivering on time and on budget.”',
+			},
+		],
+	},
+	team: {
+		title: 'Our Team',
+		description:
+			'Meet the creative minds and technical experts behind our success at Onix Digital.',
+		members: [
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/female/10.jpg',
+				name: 'Lisa Bullock',
+				position: 'Lead UI/UX Designer',
+				description:
+					'With 10+ years of experience, Lisa leads the UI/UX team, ensuring seamless and modern designs.',
+			},
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/female/16.jpg',
+				name: 'Emily Roberts',
+				position: 'Senior Web Developer',
+				description:
+					'Emily specializes in front-end development, creating responsive, high-performance websites.',
+			},
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/male/44.jpg',
+				name: 'Michael Davis',
+				position: 'SEO Strategist',
+				description:
+					'Michael is our SEO expert, driving organic traffic growth with strategic content optimization and data-driven campaigns.',
+			},
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/female/69.jpg',
+				name: 'Sarah Bonit',
+				position: 'UI/UX Designer',
+				description:
+					'Sarah brings a fresh perspective to the UI/UX team, focusing on creating intuitive designs that enhance user engagement.',
+			},
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/female/45.jpg',
+				name: 'Olivia Turner',
+				position: 'Content Manager',
+				description:
+					"Olivia is responsible for content strategy and creation, ensuring that our clients' messaging resonates with their audience.",
+			},
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/female/20.jpg',
+				name: 'Sophia Brown',
+				position: 'Junior Web Developer',
+				description:
+					'Sophia assists in developing dynamic websites, contributing innovative coding techniques and solutions.',
+			},
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/male/55.jpg',
+				name: 'James Wilson',
+				position: 'D. Marketing Specialist',
+				description:
+					'James leads our digital marketing efforts, crafting successful campaigns that boost brand visibility and drive results.',
+			},
+			{
+				image: 'https://xsgames.co/randomusers/assets/avatars/male/54.jpg',
+				name: 'Daniel Harris',
+				position: 'Project Manager',
+				description:
+					'Daniel ensures the smooth execution of projects, managing timelines and keeping the team aligned with client goals.',
 			},
 		],
 	},
 	pricing: {
-		title: 'Pricing',
-		description: 'lorem ipsum',
+		title: 'Our Pricing Plans',
+		description:
+			'Flexible plans tailored to meet the needs of your business, from small projects to large-scale enterprise solutions.',
 		list: [
 			{
-				title: 'Free',
-				value: 'Starter',
-				price: 0,
+				title: 'Starter',
+				value: 'Best for Small Projects',
+				price: 499,
 				description:
-					'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+					'Perfect for startups and small businesses seeking a professional online presence with essential features.',
 				buttonText: 'Get Started',
 				benefitList: [
-					'1 Team member',
-					'2 GB Storage',
-					'Upto 4 pages',
-					'Community support',
-					'lorem ipsum dolor',
+					'1 Project',
+					'Up to 5 Pages',
+					'Basic UI/UX Design',
+					'Standard SEO Setup',
+					'Email Support',
 				],
 				href: '#',
-				billing: '/month',
+				billing: 'One-Time Payment',
 				bgImage: firstPlanBG,
 			},
 			{
-				title: 'Premium',
+				title: 'Professional',
 				value: 'Most Popular',
-				price: 10,
+				price: 1999,
 				description:
-					'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+					'Designed for growing businesses needing more comprehensive design, development, and SEO services.',
 				buttonText: 'Buy Now',
 				benefitList: [
-					'4 Team member',
-					'4 GB Storage',
-					'Upto 6 pages',
-					'Priority support',
-					'lorem ipsum dolor',
+					'Up to 3 Projects',
+					'Up to 10 Pages',
+					'Advanced UI/UX Design',
+					'Full SEO Setup & Optimization',
+					'Priority Support',
+					'Monthly Maintenance',
 				],
 				href: '#',
-				billing: '/month',
+				billing: 'One-Time Payment',
 				bgImage: secondPlanBG,
 			},
 			{
 				title: 'Enterprise',
-				value: 'Most Value',
-				price: 99,
+				value: 'Best for Large Teams',
+				price: 4999,
 				description:
-					'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+					'A complete solution for large businesses requiring tailored services, including advanced design, SEO, and ongoing support.',
 				buttonText: 'Buy Now',
 				benefitList: [
-					'10 Team member',
-					'8 GB Storage',
-					'Upto 10 pages',
-					'Priority support',
-					'lorem ipsum dolor',
+					'Up to 5 Projects',
+					'Custom Number of Pages',
+					'Custom UI/UX Design & Development',
+					'Full SEO, Marketing & Analytics',
+					'Dedicated Account Manager',
+					'24/7 Premium Support',
+					'Ongoing Strategy & Optimization',
 				],
 				href: '#',
-				billing: '/year',
+				billing: 'Custom Pricing',
 				bgImage: thirdPlanBG,
 			},
 		],
 	},
 	testimonials: {
-		title: 'Client Reviews',
-		description: 'lorem',
+		title: 'What Our Clients Say',
+		description: 'Hear from some of our satisfied customers.',
 		reviews: [
 			{
-				image: 'https://randomuser.me/api/portraits/women/2.jpg',
-				name: 'lorem ipsum',
-				position: 'lorem',
+				image: 'https://randomuser.me/api/portraits/women/14.jpg',
+				name: 'Sarah Johnson',
+				position: 'Marketing Director',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“The team at Onix exceeded our expectations. Their attention to detail and professionalism made the entire process seamless.”',
 			},
 			{
 				image: 'https://randomuser.me/api/portraits/women/3.jpg',
-				name: 'John Doe',
-				position: 'lorem',
+				name: 'Michael Lee',
+				position: 'Founder & CEO',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“Our new website is fast, intuitive, and beautifully designed. Onix Digital’s work has been invaluable to our success.”',
 			},
 			{
 				image: 'https://randomuser.me/api/portraits/women/9.jpg',
-				name: 'John Doe',
-				position: 'lorem',
+				name: 'Alexandra Martinez',
+				position: 'Small Business Owner',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“Onix helped us redesign our website, and the results have been phenomenal. Highly recommend their services.”',
 			},
 			{
-				image: 'https://randomuser.me/api/portraits/women/6.jpg',
-				name: 'John Doe',
-				position: 'lorem',
+				image: 'https://randomuser.me/api/portraits/men/12.jpg',
+				name: 'James Smith',
+				position: 'Operations Manager',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“Onix Digital helped us revamp our old website and optimize it for search engines. The results have been fantastic with increased traffic and conversions.”',
 			},
 			{
-				image: 'https://randomuser.me/api/portraits/women/13.jpg',
-				name: 'John Doe',
-				position: 'lorem',
+				image: 'https://randomuser.me/api/portraits/women/19.jpg',
+				name: 'Emily Green',
+				position: 'Creative Director',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“Working with Onix Digital was a game-changer for our business. Their expertise in web design and UI/UX resulted in a beautiful, user-friendly website that has impressed all of our clients.”',
 			},
 			{
-				image: 'https://randomuser.me/api/portraits/women/22.jpg',
-				name: 'John Doe',
-				position: 'lorem',
+				image: 'https://randomuser.me/api/portraits/men/1.jpg',
+				name: 'Bill Wright',
+				position: 'Tech Startup Founder',
 				feedback:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est similique eius!',
+					'“The Onix team delivered our website ahead of schedule, and it exceeded our expectations in both design and functionality. Their attention to detail and responsiveness were outstanding.”',
 			},
 		],
 	},
 	faq: {
-		title: 'Frequently Asked Question',
+		title: 'Frequently Asked Questions',
 		list: [
 			{
-				question:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
-				answer: 'Phasellus nec massa vitae tortor feugiat malesuada.',
+				question: 'What services does Onix Digital provide?',
+				answer: 'We specialize in web design, UI/UX, SEO, and web development to help businesses grow their online presence.',
+			},
+			{
+				question: 'How long does it take to build a website?',
+				answer: 'Timelines vary based on the complexity of the project, but most websites are completed within 4-6 weeks.',
+			},
+			{
+				question: 'Can you help with SEO?',
+				answer: 'Yes, we offer comprehensive SEO services to improve your website’s ranking and visibility on search engines.',
+			},
+			{
+				question: 'Do you offer custom web design solutions?',
+				answer: 'Yes, we specialize in custom web design tailored to meet the unique needs and branding of each client.',
 			},
 			{
 				question:
-					'Praesent rutrum sapien at massa sagittis, dignissim dictum?',
-				answer: 'Vivamus quis arcu quis libero imperdiet tempor id volutpat ligula.',
+					'Can you maintain and update our website after launch?',
+				answer: 'Absolutely. We offer ongoing website maintenance and support to ensure your site remains updated and fully functional.',
 			},
 			{
-				question: 'Phasellus at risus a quam condimentum viverra?',
-				answer: 'Cras venenatis lectus consequat sem mollis, a rutrum nisl tempus.',
+				question: 'What industries do you work with?',
+				answer: 'We work with a wide range of industries including tech, retail, healthcare, finance, and more. Our services are adaptable to any business sector.',
 			},
 			{
-				question:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
-				answer: 'Phasellus nec massa vitae tortor feugiat malesuada.',
+				question: 'Do you offer eCommerce solutions?',
+				answer: 'Yes, we provide full eCommerce development services, including secure payment gateways, product management systems, and scalable solutions.',
 			},
 			{
-				question:
-					'Praesent rutrum sapien at massa sagittis, dignissim dictum?',
-				answer: 'Vivamus quis arcu quis libero imperdiet tempor id volutpat ligula.',
-			},
-			{
-				question: 'Phasellus at risus a quam condimentum viverra?',
-				answer: 'Cras venenatis lectus consequat sem mollis, a rutrum nisl tempus.',
+				question: 'How do I get started with Onix Digital?',
+				answer: "Simply contact us through our website, and we'll schedule an initial consultation to discuss your project needs and goals.",
 			},
 		],
 	},
 	footer: {
 		title: 'About Us',
-		description: 'lorem',
+		description:
+			'Onix Digital Agency is a team of creative professionals dedicated to helping businesses achieve success through innovative web design and development solutions.',
 		title2: 'Customer Service',
 		title2Links: [
 			{
@@ -263,8 +353,8 @@ export const data = {
 				href: '#',
 			},
 		],
-		title4: 'News Letter',
+		title4: 'Newsletter',
 		title4Description:
-			'Enter your email to get the latest news and updates',
+			'Subscribe to our newsletter for the latest updates and exclusive offers.',
 	},
 }
