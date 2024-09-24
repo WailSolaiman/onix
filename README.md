@@ -18,26 +18,6 @@ Onix is a cutting-edge digital and web agency specializing in modern web solutio
 -   **Styling**: PostCSS and Autoprefixer for optimized and cross-browser compatible CSS
 -   **Icons**: React Icons for easy-to-use and scalable icons across the app
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm run build`
-
-Builds the app for production, optimizing for the best performance.
-
-### `npm run preview`
-
-Previews the production build locally before deployment.
-
-### `npm run lint`
-
-Lints the codebase to ensure best practices and coding standards.
-
 ## License
 
 This project is licensed under the MIT License.
@@ -45,5 +25,7 @@ This project is licensed under the MIT License.
 ---
 
 ## Link
+
+---
 
 Created with ❤️ by Wail Solaiman.
