@@ -7,7 +7,7 @@ const Projects = () => {
 	const { portfolio } = data
 
 	return (
-		<div className='py-20'>
+		<div id='projects' className='py-20'>
 			<div className='w-4/5 m-auto space-y-8'>
 				<motion.div
 					initial={{ opacity: 0 }}

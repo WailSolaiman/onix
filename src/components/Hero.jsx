@@ -11,13 +11,13 @@ const Hero = () => {
 
 	return (
 		<div
-			className=''
+			id='homepage'
 			style={{
 				backgroundImage: `url(${bgImage})`,
 				backgroundRepeat: 'no-repeat',
 			}}>
 			<div
-				className='w-4/5 m-auto mt-20 flex flex-col lg:flex-row justify-between 
+				className='w-4/5 m-auto pt-20 flex flex-col lg:flex-row justify-between 
 		items-center space-y-10 md:space-y-0'>
 				<motion.div
 					initial={{ opacity: 0, x: -100 }}

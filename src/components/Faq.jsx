@@ -15,6 +15,7 @@ const Faq = () => {
 
 	return (
 		<div
+			id='faqs'
 			className='py-14 bg-white'
 			style={{
 				backgroundImage: `url(${bgImage})`,

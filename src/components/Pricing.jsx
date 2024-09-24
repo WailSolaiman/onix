@@ -11,6 +11,7 @@ const Pricing = () => {
 
 	return (
 		<div
+			id='pricing'
 			className='py-20 bg-white border-y-2 border-[#ff8169]'
 			style={{
 				backgroundImage: `url(${bgImage})`,

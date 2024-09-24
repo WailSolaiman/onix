@@ -37,6 +37,7 @@ const Contact = () => {
 
 	return (
 		<div
+			id='contact'
 			className='py-20 bg-gray-100'
 			style={{
 				backgroundImage: `url(${bgImage})`,

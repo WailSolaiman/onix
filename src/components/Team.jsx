@@ -10,6 +10,7 @@ const Team = () => {
 
 	return (
 		<div
+			id='team'
 			className='py-20 bg-white'
 			style={{
 				backgroundImage: `url(${bgImage})`,
