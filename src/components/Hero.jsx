@@ -1,57 +1,34 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-
-import heroImage from '../assets/hero.png'
-import bgImage from '../assets/baner-dec-left.png'
-
+import ResponsiveHeroBanner from './ui/ResponsiveHeroBanner'
 import { data } from '../constants'
 
+const SCROLL_OFFSET = 88
+
+function scrollToSection(id) {
+	const el = document.getElementById(id)
+	if (!el) return
+	const top = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET
+	window.scrollTo({ top, behavior: 'smooth' })
+}
+
 const Hero = () => {
-	const { hero } = data
+	const h = data.hero
 
 	return (
-		<div
-			id='homepage'
-			style={{
-				backgroundImage: `url(${bgImage})`,
-				backgroundRepeat: 'no-repeat',
-			}}>
-			<div
-				className='w-4/5 m-auto pt-20 flex flex-col lg:flex-row justify-between 
-		items-center space-y-10 md:space-y-0'>
-				<motion.div
-					initial={{ opacity: 0, x: -100 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					transition={{ duration: 0.2, ease: 'easeInOut' }}
-					viewport={{ amount: 0.1 }}
-					className='lg:w-1/2 space-y-6 my-10'>
-					<p className='font-bold'>{hero.subHeader}</p>
-					<h1 className='text-5xl md:text-7xl font-bold'>
-						{hero.header}
-					</h1>
-					<p className='md:text-lg'>{hero.description}</p>
-					<div className='flex space-x-5'>
-						<button className='px-5 py-3 rounded-full font-semibold shadow-md bg-[#9acdf3] text-black hover:bg-[#ff8169]'>
-							{hero.buttonText}
-						</button>
-					</div>
-				</motion.div>
-				<div className='lg:w-1/2'>
-					<motion.img
-						src={heroImage}
-						alt='onix'
-						className=''
-						initial={{ opacity: 0, x: 50 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{
-							duration: 0.4,
-							ease: 'easeInOut',
-						}}
-						viewport={{ amount: 0.5 }}
-					/>
-				</div>
-			</div>
-		</div>
+		<ResponsiveHeroBanner
+			sectionId="homepage"
+			backgroundImageUrl={h.backgroundImageUrl}
+			badgeLabel={h.badgeLabel}
+			badgeText={h.badgeText}
+			title={h.title}
+			titleLine2={h.titleLine2}
+			description={h.description}
+			primaryButtonText={h.buttonText}
+			secondaryButtonText={h.secondaryButtonText}
+			onPrimaryClick={() => scrollToSection('contact')}
+			onSecondaryClick={() => scrollToSection('projects')}
+			partnersTitle={h.partnersTitle}
+			partners={h.partners}
+		/>
 	)
 }
 

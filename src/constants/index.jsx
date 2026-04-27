@@ -9,14 +9,41 @@ import portfolio4Image from '../assets/video-big-thumb-04.png'
 import firstPlanBG from '../assets/first-plan-bg.png'
 import secondPlanBG from '../assets/second-plan-bg.png'
 import thirdPlanBG from '../assets/third-plan-bg.png'
+import {
+	SiGoogle,
+	SiAmazon,
+	SiShopify,
+	SiSlack,
+	SiNotion,
+	SiMicrosoft,
+	SiGithub,
+	SiVercel,
+} from 'react-icons/si'
 
 export const data = {
 	hero: {
 		subHeader: 'Professional Web Design & Development',
 		header: 'Elevate Your Digital Presence',
+		title: 'Elevate Your',
+		titleLine2: 'Digital Presence',
 		description:
 			'At Onix Digital Agency, we craft cutting-edge websites, intuitive user interfaces, and seamless digital experiences to grow your business.',
 		buttonText: 'Start Your Project',
+		secondaryButtonText: 'View our work',
+		badgeLabel: 'Onix',
+		badgeText: 'Professional web design, UX, SEO & development',
+		backgroundImageUrl: '/red-planet.jpg',
+		partnersTitle: 'Trusted by teams building online',
+		partners: [
+			{ label: 'Google', href: '#', icon: SiGoogle },
+			{ label: 'Amazon', href: '#', icon: SiAmazon },
+			{ label: 'Shopify', href: '#', icon: SiShopify },
+			{ label: 'Slack', href: '#', icon: SiSlack },
+			{ label: 'Notion', href: '#', icon: SiNotion },
+			{ label: 'Microsoft', href: '#', icon: SiMicrosoft },
+			{ label: 'GitHub', href: '#', icon: SiGithub },
+			{ label: 'Vercel', href: '#', icon: SiVercel },
+		],
 	},
 	insights: {
 		title: 'Innovative Solutions for Your Business',

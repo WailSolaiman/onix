@@ -12,7 +12,7 @@ import Contact from './components/Contact'
 
 function App() {
 	return (
-		<div className='bg-gradient-to-r from-red-200 via-pink-200 to-purple-200 min-h-screen'>
+		<div className='min-h-screen w-full max-w-full overflow-x-clip bg-gradient-to-r from-red-200 via-pink-200 to-purple-200 font-sans antialiased'>
 			<Navbar />
 			<Hero />
 			<Insights />
