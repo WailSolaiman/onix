@@ -32,7 +32,7 @@ export const data = {
 		secondaryButtonText: 'View our work',
 		badgeLabel: 'Onix',
 		badgeText: 'Professional web design, UX, SEO & development',
-		backgroundImageUrl: '/red-planet.jpg',
+		backgroundImageUrl: `${import.meta.env.BASE_URL}red-planet.jpg`,
 		partnersTitle: 'Trusted by teams building online',
 		partners: [
 			{ label: 'Google', href: '#', icon: SiGoogle },
