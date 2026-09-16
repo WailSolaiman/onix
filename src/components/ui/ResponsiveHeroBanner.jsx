@@ -58,7 +58,7 @@ const ResponsiveHeroBanner = ({
 				<div className="mx-auto w-full max-w-7xl px-6 py-16 sm:py-20">
 					<div className="mx-auto max-w-3xl text-center">
 						<div className="mb-6 inline-flex max-w-full flex-col items-center gap-1.5 rounded-2xl border border-[#c34c26]/25 bg-[#1a0a0a]/55 px-4 py-2 shadow-[inset_0_1px_0_rgba(224,192,64,0.08)] backdrop-blur-sm animate-fade-slide-in-1 sm:max-w-none sm:flex-row sm:gap-3 sm:rounded-full sm:px-3 sm:py-2">
-							<span className="inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-b from-[#ffe8a8] via-[#e06020] to-[#c34c26] px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wider text-[#0a0404] sm:text-xs">
+							<span className="hidden shrink-0 items-center justify-center rounded-full bg-gradient-to-b from-[#ffe8a8] via-[#e06020] to-[#c34c26] px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wider text-[#0a0404] sm:inline-flex sm:text-xs">
 								{badgeLabel}
 							</span>
 							<span className="text-center text-xs font-medium leading-snug text-white/85 sm:text-left sm:text-sm sm:leading-normal">
