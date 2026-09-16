@@ -41,7 +41,7 @@ const ResponsiveHeroBanner = ({
 	return (
 		<section
 			id={sectionId}
-			className="relative isolate w-full min-h-[calc(100dvh-4rem)] max-w-full overflow-x-clip"
+			className="relative isolate flex w-full min-h-[calc(100dvh-4rem)] max-w-full flex-col overflow-x-clip"
 		>
 			<img
 				src={backgroundImageUrl}
@@ -54,8 +54,8 @@ const ResponsiveHeroBanner = ({
 			/>
 			<div className="pointer-events-none absolute inset-0 ring-1 ring-[#c34c26]/20" aria-hidden />
 
-			<div className="relative z-10 font-sans">
-				<div className="mx-auto max-w-7xl px-6 pb-16 pt-20 sm:pt-28 md:pt-32 lg:pt-40">
+			<div className="relative z-10 flex flex-1 items-center font-sans">
+				<div className="mx-auto w-full max-w-7xl px-6 py-16 sm:py-20">
 					<div className="mx-auto max-w-3xl text-center">
 						<div className="mb-6 inline-flex max-w-full flex-col items-center gap-1.5 rounded-2xl border border-[#c34c26]/25 bg-[#1a0a0a]/55 px-4 py-2 shadow-[inset_0_1px_0_rgba(224,192,64,0.08)] backdrop-blur-sm animate-fade-slide-in-1 sm:max-w-none sm:flex-row sm:gap-3 sm:rounded-full sm:px-3 sm:py-2">
 							<span className="inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-b from-[#ffe8a8] via-[#e06020] to-[#c34c26] px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wider text-[#0a0404] sm:text-xs">
@@ -96,7 +96,7 @@ const ResponsiveHeroBanner = ({
 						</div>
 					</div>
 
-					<div className="mx-auto mt-20 max-w-5xl">
+					<div className="mx-auto mt-16 max-w-5xl sm:mt-20">
 						<p className="text-center text-sm text-white/70 animate-fade-slide-in-1">
 							{partnersTitle}
 						</p>
