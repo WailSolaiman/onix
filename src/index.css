@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	html {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	html::-webkit-scrollbar,
+	body::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		display: none;
+	}
+}
+
 @layer utilities {
 	.animate-fade-slide-in-1 {
 		animation: fadeSlideIn 0.7s ease-out 0.08s both;
